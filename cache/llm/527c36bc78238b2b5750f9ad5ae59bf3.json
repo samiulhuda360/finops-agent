@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Microsoft raised prices on 24 November 2025 for resources managed by the platform and web teams, causing daily costs to jump from $30.53 to $46.45. This price increase added $126.46 in extra expenses before the incident ended on 5 December 2025. Review the updated unit pricing on these resources to ensure your budget accounts for the higher rates going forward.",
+ "latency_s": 1.493,
+ "prompt_tokens": 283,
+ "completion_tokens": 91
+}

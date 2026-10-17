@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "On 24 November 2025, a Microsoft cost incident happened because the price per unit went up for the platform and web teams. This mattered because it added $171.01 in extra cost so far to resources like law-acme-prod. The incident ended on 6 December 2025, and the next step is to review the updated pricing.",
+ "latency_s": 1.289,
+ "prompt_tokens": 293,
+ "completion_tokens": 81
+}

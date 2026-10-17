@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Usage went up for resource stwebassetsprod on 25 August 2026, causing extra costs of $626.46 for the web team. The daily cost jumped from $10.12 to $175.16 before the incident ended on 28 August 2026. Please review the Bandwidth and Storage services to confirm the issue is fully resolved.",
+ "latency_s": 1.413,
+ "prompt_tokens": 270,
+ "completion_tokens": 87
+}

@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "A new Microsoft virtual machine named vm-ml-loadtest-32 started running on 5 September 2026 and is currently costing the ml team $6.05 a day, adding $157.25 in extra cost so far. If we do not fix this, it will add $184.09 in extra cost per month. Please check with the ml team to see if we can shut down this resource.",
+ "latency_s": 1.561,
+ "prompt_tokens": 285,
+ "completion_tokens": 94
+}

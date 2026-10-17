@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The platform team should move the tw-logs-archive resource on AWS from Standard to Standard-IA. This change saves $136.30 a month and $1,635.60 a year. Please approve the lifecycle rule to start saving money.",
+ "latency_s": 1.255,
+ "prompt_tokens": 318,
+ "completion_tokens": 56
+}

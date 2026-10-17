@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The data team should buy a 1-year reservation for the Microsoft database server currently using pay-as-you-go. This change will save $3,620.04 a year. Review the suggestion and approve the purchase to secure the discount.",
+ "latency_s": 1.225,
+ "prompt_tokens": 338,
+ "completion_tokens": 54
+}

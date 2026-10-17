@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Microsoft increased the unit price on 24 November 2025 for three resources used by the platform and web teams, which raised our daily cost from $50.78 to $64.96. This price increase added $171.01 in extra costs before the incident ended on 6 December 2025. Please review the updated Microsoft pricing to confirm these charges are correct.",
+ "latency_s": 1.365,
+ "prompt_tokens": 293,
+ "completion_tokens": 87
+}

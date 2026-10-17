@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Spend on Microsoft resources like Virtual Machines rose above its usual level starting on 1 December 2025 and ending on 9 December 2025. This caused an extra cost so far of $91.62 compared to the usual daily cost of $66.93. The platform and web teams should review the incident detected on 1 December 2025.",
+ "latency_s": 1.137,
+ "prompt_tokens": 290,
+ "completion_tokens": 82
+}

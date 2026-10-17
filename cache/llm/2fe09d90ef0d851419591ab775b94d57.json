@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The platform team should resize the Microsoft virtual machine vm-api-prod-02 from Standard_D8s_v5 to Standard_D4s_v5 because it is currently oversized. This change will save $184.09 per month and $2,209.08 per year while keeping performance safe. Please approve the resize request to capture these savings.",
+ "latency_s": 1.372,
+ "prompt_tokens": 350,
+ "completion_tokens": 81
+}

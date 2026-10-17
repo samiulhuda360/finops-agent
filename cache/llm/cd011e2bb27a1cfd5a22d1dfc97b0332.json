@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The ml team has an idle AWS resource named loadtest-ml-tmp costing $231.64 a month. Stopping or deleting it will save $2,779.68 a year. Confirm with the owner, take a snapshot, and then delete it.",
+ "latency_s": 1.292,
+ "prompt_tokens": 282,
+ "completion_tokens": 58
+}

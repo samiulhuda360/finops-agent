@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "A new platform cost started in Microsoft westeurope on 16 January 2026 and ended on 6 March 2026, adding $1,291.86 in extra charges. This happened because new spend for Virtual Machines, Bandwidth, and Storage did not exist before. Please review the platform team's new resources to make sure they are still needed.",
+ "latency_s": 1.403,
+ "prompt_tokens": 274,
+ "completion_tokens": 82
+}

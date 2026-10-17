@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloud Cost Watch</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f4f6f5; --surface: #fcfcfb; --border: #dfe5e3; --grid: #e8ecea;
+  --text: #13302c; --text-2: #4c5f5c; --muted: #73827f;
+  --azure: #008a7d; --aws: #c96a12; --accent: #1f6f66; --band: rgba(19, 48, 44, .07);
+  --chip: #e6f2ef; --chip-text: #1f5a53;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #111615; --surface: #1a1f1e; --border: #2c3534; --grid: #252d2c;
+    --text: #eef3f1; --text-2: #b9c6c3; --muted: #8d9b98;
+    --azure: #14a394; --aws: #d27a1e; --accent: #5fbcae; --band: rgba(238, 243, 241, .07);
+    --chip: #203330; --chip-text: #a6dcd3;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111615; --surface: #1a1f1e; --border: #2c3534; --grid: #252d2c;
+  --text: #eef3f1; --text-2: #b9c6c3; --muted: #8d9b98;
+  --azure: #14a394; --aws: #d27a1e; --accent: #5fbcae; --band: rgba(238, 243, 241, .07);
+  --chip: #203330; --chip-text: #a6dcd3;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { padding: 20px 24px 8px; display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; }
+header h1 { font-size: 20px; margin: 0; }
+header .sub { color: var(--text-2); }
+main { padding: 8px 24px 32px; max-width: 1280px; margin: 0 auto; }
+.filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 8px 0 16px; }
+.filters label { display: flex; flex-direction: column; font-size: 12px; color: var(--text-2); gap: 4px; }
+select, button { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.seg button { border: 0; border-radius: 0; background: transparent; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--chip); color: var(--chip-text); font-weight: 600; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.tile { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+.tile .k { color: var(--text-2); font-size: 12px; }
+.tile .v { font-size: 26px; font-weight: 650; margin-top: 2px; font-variant-numeric: tabular-nums; }
+.tile .d { color: var(--muted); font-size: 12px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.card h2 { font-size: 15px; margin: 0 0 4px; }
+.card .note { color: var(--text-2); font-size: 12px; margin: 0 0 10px; }
+.legend { display: flex; gap: 16px; font-size: 12px; color: var(--text-2); margin-bottom: 6px; flex-wrap: wrap; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.chart { position: relative; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+.axis text { fill: var(--muted); font-size: 11px; }
+.grid line { stroke: var(--grid); }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.12); display: none; min-width: 170px; z-index: 2; }
+.tip b { display: block; margin-bottom: 4px; }
+.tip .row { display: flex; justify-content: space-between; gap: 12px; font-variant-numeric: tabular-nums; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; color: var(--text-2); font-weight: 600; border-bottom: 1px solid var(--border); padding: 6px 8px; white-space: nowrap; }
+td { border-bottom: 1px solid var(--grid); padding: 8px; vertical-align: top; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pill { display: inline-block; background: var(--chip); color: var(--chip-text); border-radius: 999px; padding: 1px 8px; font-size: 11px; white-space: nowrap; }
+.why { color: var(--text-2); font-size: 12px; margin-top: 3px; max-width: 70ch; }
+.scroll { overflow-x: auto; }
+#incidents { max-height: 520px; overflow-y: auto; }
+.empty { color: var(--muted); padding: 12px 0; }
+.theme { margin-left: auto; }
+@media (max-width: 600px) { header, main { padding-left: 16px; padding-right: 16px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Cloud Cost Watch</h1>
+  <span class="sub" id="subtitle"></span>
+  <button class="theme" id="theme" type="button" aria-label="Switch light or dark theme">Theme</button>
+</header>
+<main>
+  <div class="filters" role="group" aria-label="Filters">
+    <label>Team <select id="f-team"></select></label>
+    <label>Environment <select id="f-env"></select></label>
+    <label>Project <select id="f-project"></select></label>
+    <label>Cloud <select id="f-cloud"></select></label>
+    <div class="seg" id="range" role="group" aria-label="Time range">
+      <button type="button" data-days="90">90 days</button>
+      <button type="button" data-days="182">6 months</button>
+      <button type="button" data-days="365" aria-pressed="true">12 months</button>
+    </div>
+  </div>
+  <section class="tiles" id="tiles"></section>
+  <section class="card">
+    <h2>Daily spend, with cost incidents</h2>
+    <p class="note">Effective cost per day (commitments spread over the days they cover). Dashed lines mark where an incident started and the bar above shows how long it lasted; hover for the day's numbers.</p>
+    <div class="legend" id="trend-legend"></div>
+    <div class="chart" id="trend"></div>
+  </section>
+  <div class="two">
+    <section class="card">
+      <h2>Spend by service, last 30 days</h2>
+      <p class="note">Coloured by cloud. Follows the filters.</p>
+      <div class="chart" id="services"></div>
+    </section>
+    <section class="card">
+      <h2>Cost incidents</h2>
+      <p class="note">Found by the seasonal detector, explained in plain words. Follows the team filter.</p>
+      <div class="scroll" id="incidents"></div>
+    </section>
+  </div>
+  <section class="card">
+    <h2>Top savings</h2>
+    <p class="note">Priced from the public Azure and AWS price lists. Follows the team and cloud filters.</p>
+    <div class="scroll" id="savings"></div>
+  </section>
+</main>
+<script>
+const DATA = /*__DATA__*/null;
+const $ = (s) => document.querySelector(s);
+const money = (x, d = 0) => "$" + x.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const cube = DATA.cube;
+const DIMS = { team: "Tags.team", env: "Tags.environment", project: "Tags.project", cloud: "ServiceProviderName" };
+const state = { team: "", env: "", project: "", cloud: "", days: 365 };
+const CLOUD_NAME = { Microsoft: "Azure", AWS: "AWS" };
+
+function storeGet(k) { try { return localStorage.getItem(k); } catch { return null; } }
+function storeSet(k, v) { try { localStorage.setItem(k, v); } catch { /* storage may be blocked */ } }
+const saved = storeGet("finops-theme");
+if (saved) document.documentElement.dataset.theme = saved;
+$("#theme").onclick = () => {
+  const dark = getComputedStyle(document.documentElement).colorScheme.includes("dark");
+  document.documentElement.dataset.theme = dark ? "light" : "dark";
+  storeSet("finops-theme", document.documentElement.dataset.theme);
+  render();
+};
+
+$("#title").textContent = DATA.meta.company + " cloud costs";
+$("#subtitle").textContent = `${DATA.meta.start} to ${DATA.meta.end} · Azure + AWS · FOCUS ${DATA.meta.focus_version} billing data · prices from ${DATA.meta.prices_fetched}`;
+
+for (const [key, dim] of Object.entries(DIMS)) {
+  const sel = $("#f-" + key);
+  const label = key === "cloud" ? "All clouds" : "All";
+  sel.innerHTML = `<option value="">${label}</option>` + cube.dims[dim].map((v) => `<option value="${esc(v)}">${esc(key === "cloud" ? CLOUD_NAME[v] || v : v)}</option>`).join("");
+  sel.onchange = () => { state[key] = sel.value; render(); };
+}
+for (const b of document.querySelectorAll("#range button")) {
+  b.onclick = () => {
+    state.days = Number(b.dataset.days);
+    document.querySelectorAll("#range button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+    render();
+  };
+}
+
+function rowsMatch(i) {
+  for (const [key, dim] of Object.entries(DIMS)) {
+    if (state[key] && cube.dims[dim][cube.cols[dim][i]] !== state[key]) return false;
+  }
+  return true;
+}
+
+function aggregate() {
+  const n = cube.dates.length;
+  const byCloud = { Microsoft: new Float64Array(n), AWS: new Float64Array(n) };
+  const services = {};
+  const last30 = n - 30;
+  for (let i = 0; i < cube.cost.length; i++) {
+    if (!rowsMatch(i)) continue;
+    const cloud = cube.dims.ServiceProviderName[cube.cols.ServiceProviderName[i]];
+    const d = cube.day[i];
+    byCloud[cloud][d] += cube.cost[i];
+    if (d >= last30) {
+      const s = cube.dims.ServiceName[cube.cols.ServiceName[i]];
+      services[s] = services[s] || { cost: 0, cloud };
+      services[s].cost += cube.cost[i];
+    }
+  }
+  return { byCloud, services };
+}
+
+function css(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+
+function tiles(agg) {
+  const n = cube.dates.length;
+  const total = (a, b) => { let s = 0; for (let d = a; d < b; d++) s += agg.byCloud.Microsoft[d] + agg.byCloud.AWS[d]; return s; };
+  const now = total(n - 30, n), prev = total(n - 60, n - 30);
+  const change = prev > 0 ? (now - prev) / prev * 100 : 0;
+  const incs = visibleIncidents();
+  const open = incs.filter((i) => i.ongoing);
+  const recs = visibleRecs();
+  const saving = recs.reduce((s, r) => s + r.monthly_saving, 0);
+  $("#tiles").innerHTML = [
+    ["Spend, last 30 days", money(now), `${change >= 0 ? "up" : "down"} ${Math.abs(change).toFixed(1)}% on the 30 days before`],
+    ["Cost incidents (12 months)", String(incs.length), `${open.length} still running`],
+    ["Still running, per month", money(open.reduce((s, i) => s + i.monthly_projection, 0)), "extra cost if not fixed"],
+    ["Savings found, per month", money(saving), `${recs.filter((r) => r.monthly_saving > 0).length} recommendations`],
+  ].map(([k, v, d]) => `<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="d">${d}</div></div>`).join("");
+}
+
+function trend(agg) {
+  const el = $("#trend");
+  const W = Math.max(320, el.clientWidth || 900), H = 300, m = { l: 56, r: 12, t: 46, b: 26 };
+  const n = cube.dates.length, from = Math.max(0, n - state.days);
+  const az = agg.byCloud.Microsoft, aw = agg.byCloud.AWS;
+  let max = 1;
+  for (let d = from; d < n; d++) max = Math.max(max, az[d] + aw[d]);
+  max = niceMax(max);
+  const x = (d) => m.l + (d - from) / Math.max(1, n - 1 - from) * (W - m.l - m.r);
+  const y = (v) => H - m.b - v / max * (H - m.t - m.b);
+  const area = (lo, hi) => {
+    let p = `M${x(from)},${y(hi(from))}`;
+    for (let d = from + 1; d < n; d++) p += `L${x(d)},${y(hi(d))}`;
+    for (let d = n - 1; d >= from; d--) p += `L${x(d)},${y(lo(d))}`;
+    return p + "Z";
+  };
+  const ticks = [0, .25, .5, .75, 1].map((f) => f * max);
+  const months = [];
+  for (let d = from; d < n; d++) if (cube.dates[d].endsWith("-01")) months.push(d);
+  const idx = Object.fromEntries(cube.dates.map((s, i) => [s, i]));
+  const bands = visibleIncidents().map((inc, k) => {
+    const a = idx[inc.start], b = inc.end ? idx[inc.end] : n - 1;
+    if (b < from) return "";
+    const row = k % 3, xa = x(Math.max(a, from)), xb = Math.max(x(b), xa + 3);
+    const ty = m.t - 30 + row * 10;
+    return `<g><title>${esc(inc.id)}: ${esc(inc.root_names.join(", "))} (${esc(inc.start)} to ${esc(inc.end || "now")})</title>
+      ${a >= from ? `<line x1="${xa}" x2="${xa}" y1="${ty + 2}" y2="${H - m.b}" stroke="var(--text-2)" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/>` : ""}
+      <rect x="${xa}" y="${ty + 2}" width="${xb - xa}" height="4" rx="2" fill="var(--text-2)" opacity=".55"/>
+      <text x="${xa + 3}" y="${ty}" font-size="10" fill="var(--text-2)">${esc(inc.id)}</text></g>`;
+  }).join("");
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Daily spend by cloud">
+    <g class="grid">${ticks.map((t) => `<line x1="${m.l}" x2="${W - m.r}" y1="${y(t)}" y2="${y(t)}"/>`).join("")}</g>
+    ${bands}
+    <path d="${area(() => 0, (d) => az[d])}" fill="var(--azure)" opacity=".9"/>
+    <path d="${area((d) => az[d], (d) => az[d] + aw[d])}" fill="var(--aws)" opacity=".9"/>
+    <g class="axis">${ticks.map((t) => `<text x="${m.l - 8}" y="${y(t) + 4}" text-anchor="end">${money(t)}</text>`).join("")}
+    ${months.map((d) => `<text x="${x(d)}" y="${H - 8}" text-anchor="middle">${new Date(cube.dates[d] + "T00:00:00Z").toLocaleString("en-NZ", { month: "short", timeZone: "UTC" })}</text>`).join("")}</g>
+    <line id="cross" y1="${m.t}" y2="${H - m.b}" stroke="var(--text-2)" stroke-dasharray="3 3" visibility="hidden"/>
+    <rect x="${m.l}" y="${m.t}" width="${W - m.l - m.r}" height="${H - m.t - m.b}" fill="transparent" id="hit"/>
+  </svg><div class="tip" id="tip"></div>`;
+  $("#trend-legend").innerHTML = `<span><i style="background:var(--azure)"></i>Azure</span><span><i style="background:var(--aws)"></i>AWS</span><span>┆ incident start, bar = how long it lasted</span>`;
+  const hit = $("#hit"), tip = $("#tip"), cross = $("#cross");
+  hit.onmousemove = (ev) => {
+    const r = hit.getBoundingClientRect();
+    const f = (ev.clientX - r.left) / r.width;
+    const d = Math.round(from + f * (n - 1 - from));
+    const xs = x(d);
+    cross.setAttribute("x1", xs); cross.setAttribute("x2", xs); cross.setAttribute("visibility", "visible");
+    const here = visibleIncidents().filter((i) => idx[i.start] <= d && d <= (i.end ? idx[i.end] : n - 1));
+    tip.innerHTML = `<b>${cube.dates[d]}</b>
+      <div class="row"><span>Azure</span><span>${money(az[d], 2)}</span></div>
+      <div class="row"><span>AWS</span><span>${money(aw[d], 2)}</span></div>
+      <div class="row"><span>Total</span><span>${money(az[d] + aw[d], 2)}</span></div>
+      ${here.map((i) => `<div class="row"><span>${esc(i.id)}</span><span>${esc(i.root_names.join(", ").slice(0, 28))}</span></div>`).join("")}`;
+    tip.style.display = "block";
+    const left = xs / W * el.clientWidth;
+    tip.style.left = Math.min(el.clientWidth - 190, left + 12) + "px";
+    tip.style.top = "30px";
+  };
+  hit.onmouseleave = () => { tip.style.display = "none"; cross.setAttribute("visibility", "hidden"); };
+}
+
+function niceMax(v) {
+  const p = Math.pow(10, Math.floor(Math.log10(v)));
+  for (const s of [1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10]) if (s * p >= v) return s * p;
+  return 10 * p;
+}
+
+function servicesChart(agg) {
+  const el = $("#services");
+  const list = Object.entries(agg.services).sort((a, b) => b[1].cost - a[1].cost).slice(0, 8);
+  if (!list.length) { el.innerHTML = `<div class="empty">No spend for this filter.</div>`; return; }
+  const W = Math.max(300, el.clientWidth || 500), row = 30, H = list.length * row + 8, lw = 210;
+  const max = list[0][1].cost;
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Spend by service">
+    ${list.map(([name, v], i) => {
+      const w = Math.max(2, v.cost / max * (W - lw - 90));
+      const color = v.cloud === "AWS" ? "var(--aws)" : "var(--azure)";
+      return `<g><title>${esc(name)}: ${money(v.cost, 2)}</title>
+        <text x="${lw - 8}" y="${i * row + 19}" text-anchor="end" font-size="12" fill="var(--text)">${esc(name)}</text>
+        <rect x="${lw}" y="${i * row + 7}" width="${w}" height="16" rx="4" fill="${color}"/>
+        <text x="${lw + w + 6}" y="${i * row + 19}" font-size="12" fill="var(--text-2)">${money(v.cost)}</text></g>`;
+    }).join("")}
+  </svg>`;
+}
+
+function visibleIncidents() {
+  return DATA.incidents.filter((i) => !state.team || i.teams.includes(state.team));
+}
+function visibleRecs() {
+  return DATA.recommendations.filter((r) => (!state.team || r.team === state.team) && (!state.cloud || r.provider === state.cloud));
+}
+
+function incidentsTable() {
+  const list = visibleIncidents().slice().reverse();
+  $("#incidents").innerHTML = list.length ? `<table><thead><tr><th>Incident</th><th class="num">Extra so far</th><th class="num">Per month if not fixed</th></tr></thead><tbody>
+    ${list.map((i) => `<tr><td><span class="pill">${esc(i.id)}</span> <b>${esc(i.root_names.join(", "))}</b>
+      <div class="why">${esc(i.detected)} · ${esc(i.explanation)}</div></td>
+      <td class="num">${money(i.impact_to_date)}</td><td class="num">${i.ongoing ? money(i.monthly_projection) : "ended"}</td></tr>`).join("")}
+  </tbody></table>` : `<div class="empty">No incidents for this filter.</div>`;
+}
+
+function savingsTable() {
+  const kinds = { idle: "Idle", rightsize: "Rightsize", commitment: "Commit", tiering: "Storage tier", missing_tags: "Tags" };
+  const list = visibleRecs().slice(0, 15);
+  $("#savings").innerHTML = list.length ? `<table><thead><tr><th>Resource</th><th>Kind</th><th>Change</th><th class="num">Cost now / month</th><th class="num">Saving / month</th></tr></thead><tbody>
+    ${list.map((r) => `<tr><td><b>${esc(r.resource_name)}</b> <span class="pill">${esc(CLOUD_NAME[r.provider] || r.provider)} · ${esc(r.team)}</span>
+      <div class="why">${esc(r.explanation)}</div></td><td>${kinds[r.type] || r.type}</td>
+      <td>${esc(r.current)} → ${esc(r.target)}</td><td class="num">${money(r.monthly_cost_now)}</td><td class="num"><b>${money(r.monthly_saving)}</b></td></tr>`).join("")}
+  </tbody></table>` : `<div class="empty">No recommendations for this filter.</div>`;
+}
+
+function render() {
+  const agg = aggregate();
+  tiles(agg); trend(agg); servicesChart(agg); incidentsTable(); savingsTable();
+}
+render();
+addEventListener("resize", () => render());
+</script>
+</body>
+</html>

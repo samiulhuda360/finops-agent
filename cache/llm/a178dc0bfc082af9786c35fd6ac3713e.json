@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Usage went up for resource aks-prod-nodepool1 starting on 15 December 2025, which caused the daily cost to jump from $34.78 to $54.43 and added $356.57 in extra expenses. This incident has ended on 31 December 2025. Please review the platform team's Virtual Machines usage on Microsoft to confirm operations are back to normal.",
+ "latency_s": 1.371,
+ "prompt_tokens": 270,
+ "completion_tokens": 94
+}

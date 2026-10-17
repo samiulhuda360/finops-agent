@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Usage went up for resource aks-prod-nodepool1 starting on 13 May 2026, which ran until it ended on 27 May 2026. This incident caused an extra cost so far of $574.02 for the platform team. Please review the Virtual Machines services on Microsoft to prevent future unexpected charges.",
+ "latency_s": 1.29,
+ "prompt_tokens": 270,
+ "completion_tokens": 76
+}

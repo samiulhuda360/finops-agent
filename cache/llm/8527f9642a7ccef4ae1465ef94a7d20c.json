@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Usage went up for Amazon CloudWatch in AWS managed by the platform team, which increased costs because the daily cost went up from $5.71 to $33.72. This incident started on 22 December 2025 and ended on 5 January 2026, resulting in an extra cost so far of $259.40. Please review the usage on resource /acme/prod/app to prevent future cost spikes.",
+ "latency_s": 1.214,
+ "prompt_tokens": 268,
+ "completion_tokens": 98
+}

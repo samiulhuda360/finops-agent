@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Costs spiked on 25 July 2026 because cloud usage went up while resources were untagged, driving total extra spending to $3,335.61. This money matters because it significantly exceeds our usual daily cost of $2.31, reaching $66.65 when detected. Please apply the ml team tag to the affected Amazon Elastic Compute Cloud, Virtual Machines, and Storage services.",
+ "latency_s": 1.337,
+ "prompt_tokens": 284,
+ "completion_tokens": 88
+}

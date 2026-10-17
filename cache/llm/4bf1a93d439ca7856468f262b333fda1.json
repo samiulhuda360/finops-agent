@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "A new resource under the ml team tag caused cloud costs to spike. This added $452.59 in extra expenses between 25 April 2026 and 7 July 2026. Please review the Amazon Elastic Compute Cloud, Virtual Machines, and Storage services to confirm the incident is fully resolved.",
+ "latency_s": 1.398,
+ "prompt_tokens": 272,
+ "completion_tokens": 68
+}

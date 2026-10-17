@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "A new resource named loadtest-ml-tmp or exp-12 appeared in AWS on 8 August 2026 and is still running, which added extra_cost_so_far of $544.02. If left unfixed, this will add extra_cost_per_month_if_not_fixed of $165.90 to our cloud bill. Please review and stop this untagged ml service immediately.",
+ "latency_s": 1.381,
+ "prompt_tokens": 293,
+ "completion_tokens": 96
+}

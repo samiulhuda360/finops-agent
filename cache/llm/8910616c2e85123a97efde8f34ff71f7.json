@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "On 29 August 2026, increased usage on Amazon Elastic Compute Cloud caused the daily cost to jump from $3.02 to $10.63, adding $251.14 in extra expenses so far. If the data and ml teams do not fix these resources, it will cost an extra $262.32 per month. Please check the batch-1 and loadtest-ml-tmp resources to shut them down if they are no longer needed.",
+ "latency_s": 1.375,
+ "prompt_tokens": 289,
+ "completion_tokens": 104
+}

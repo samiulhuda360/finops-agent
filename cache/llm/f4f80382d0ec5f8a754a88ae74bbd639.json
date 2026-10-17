@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The platform team is currently paying $1,076.33 per month for pay-as-you-go servers on aks-prod-nodepool1, but switching to a 1-year reservation will save $301.84 monthly. This matters because it creates a yearly saving of $3,622.08 for the Microsoft cloud. The next step is to buy a 1-year reservation for 4 x Standard_D4s_v5.",
+ "latency_s": 2.526,
+ "prompt_tokens": 345,
+ "completion_tokens": 104
+}

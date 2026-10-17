@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The platform team should move the Microsoft resource starchivelogsprod from Hot to Cool. This change saves $210.83 a month because storage prices drop. Approve the lifecycle rule change so these savings take effect.",
+ "latency_s": 1.24,
+ "prompt_tokens": 314,
+ "completion_tokens": 46
+}

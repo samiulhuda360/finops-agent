@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "AWS resource tw-media-exports had higher usage starting on 11 March 2026, which ended on 14 March 2026 and caused an extra cost so far of $475.52. This incident raised the daily cost from $7.97 to $130.48 for the web team using Amazon Simple Storage Service. The next step is to review the web team usage detected on 11 March 2026.",
+ "latency_s": 1.568,
+ "prompt_tokens": 269,
+ "completion_tokens": 102
+}

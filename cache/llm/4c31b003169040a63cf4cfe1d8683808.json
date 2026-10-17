@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "AWS costs for Amazon Elastic Compute Cloud rose because usage went up starting on 2 August 2026, causing an extra cost so far of $2,121.70. This matters because daily spending increased from $86.84 to $142.47 by the time it was detected on 16 August 2026. The next step is to review the untagged, data, ml, platform, and web teams since the incident ended on 17 September 2026.",
+ "latency_s": 1.716,
+ "prompt_tokens": 281,
+ "completion_tokens": 113
+}

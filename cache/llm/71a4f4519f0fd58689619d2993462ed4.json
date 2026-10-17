@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The data team needs to resize the analytics-1 server on AWS because it is currently oversized. This change will save $463.28 per month and $2,779.68 per year while keeping performance safe. Please approve the resize request so we can start capturing these savings immediately.",
+ "latency_s": 1.429,
+ "prompt_tokens": 439,
+ "completion_tokens": 63
+}

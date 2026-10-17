@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The platform team can save $2,524 a year by moving the starchivelogsprod storage from Hot to Cool. This matters because the current monthly cost of $500 will drop by $210 each month. The next step is to set up a lifecycle rule to move the data.",
+ "latency_s": 1.432,
+ "prompt_tokens": 314,
+ "completion_tokens": 64
+}

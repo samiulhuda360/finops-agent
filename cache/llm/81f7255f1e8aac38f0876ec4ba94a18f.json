@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "On 28 February 2026, the ml team started a new Microsoft Virtual Machines resource named vm-ml-loadtest-25 that added $387.07 in extra cost so far. This cost matters because the usual daily cost was $0.00 and jumped to $12.10 daily before the incident ended on 31 March 2026. The next step is to review this spend with the ml team to prevent similar charges on future tests.",
+ "latency_s": 1.152,
+ "prompt_tokens": 274,
+ "completion_tokens": 105
+}

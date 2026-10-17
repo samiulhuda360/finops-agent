@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "A cost incident started on 20 August 2026 because usage went up for resources loadtest-ml-tmp, exp-12, and law-acme-prod. This unexpected usage increased the extra cost so far to $269.69, while the daily cost rose from $23.68 to $34.43 when detected. Although the status ended on 21 September 2026, the next step is to review the untagged, ml, and platform teams.",
+ "latency_s": 1.12,
+ "prompt_tokens": 294,
+ "completion_tokens": 112
+}

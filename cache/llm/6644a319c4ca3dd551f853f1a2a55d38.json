@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The data team should move the tw-data-lake resource from the Standard tier to the Standard-IA tier. This change will save $410.13 a month and $4,921.56 a year because it is rarely read. The next step is to set up a lifecycle rule to make the move happen.",
+ "latency_s": 1.12,
+ "prompt_tokens": 320,
+ "completion_tokens": 70
+}

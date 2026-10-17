@@ -1,0 +1,500 @@
+{
+ "items": 53,
+ "model_attempted": 53,
+ "grounded_first_try": 50,
+ "grounded_after_retry": 3,
+ "template_fallback": 0,
+ "first_try_grounding_rate": 0.943,
+ "model_grounding_rate_with_retry": 1.0,
+ "final_grounding_rate": 1,
+ "planted_wrong_numbers_caught": "53/53",
+ "live_calls": 0,
+ "cached_calls": 56,
+ "stopped": null,
+ "rows": [
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "On 24 November 2025, a Microsoft cost incident happened because the price per unit went up for the platform and web teams. This mattered because it added $171.01 in extra cost so far to resources like law-acme-prod. The incident ended on 6 December 2025, and the next step is to review the updated pricing."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Usage went up for resource aks-prod-nodepool1 starting on 15 December 2025, which caused the daily cost to jump from $34.78 to $54.43 and added $356.57 in extra expenses. This incident has ended on 31 December 2025. Please review the platform team's Virtual Machines usage on Microsoft to confirm operations are back to normal."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "New spend on Amazon Elastic Compute Cloud and Amazon Simple Storage Service started on 2 January 2026 because of a project tag customs change by the web team, causing an extra cost so far of $3,574.85. This will continue to add an extra cost per month if not fixed of $420.92, jumping the daily cost when detected to $12.44 from a usual daily cost of $0.00. Please have the web team review and stop these unauthorized AWS resources immediately."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "On 28 February 2026, the ml team started a new Microsoft Virtual Machines resource named vm-ml-loadtest-25 that added $387.07 in extra cost so far. This cost matters because the usual daily cost was $0.00 and jumped to $12.10 daily before the incident ended on 31 March 2026. The next step is to review this spend with the ml team to prevent similar charges on future tests."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "New Microsoft spending started in region westeurope on 11 April 2026 and ended on 4 June 2026, driven by services like Virtual Machines, Bandwidth, and Storage. This caused an extra cost so far of $1,463.85 compared to a usual daily cost of $0.00. The platform team should review the daily cost of $27.17 from 11 April 2026 to ensure this new spend does not return."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Virtual Machines, Bandwidth, and Storage resources for the platform team on Microsoft spent more than usual because spend rose above its usual level, starting on 16 April 2026 and ending on 4 June 2026. This caused an extra cost so far of $1,056.79, moving the daily cost from $0.00 to $22.83 by the time it was detected on 30 April 2026. Review these items to prevent future unexpected Microsoft charges."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "A commitment discount ended on 10 May 2026 for vm-sql-prod-01 and vm-sql-prod-02, causing daily costs to jump from $28.55 to $48.38 and adding $2,856.39 in extra costs so far. If we do nothing, we will waste an extra $603.76 per month. The next step is to renew the commitment discount for the data team to stop these higher charges."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Usage went up for resource law-acme-prod on Microsoft Log Analytics starting on 5 July 2026, which ran until it ended on 15 July 2026. This incident increased your spending by an extra cost so far of $1,841.46 because the daily cost jumped from $15.26 to $174.32 when detected. Have the platform team review the usage changes for this resource to prevent future spikes."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "On 16 July 2026, untagged AWS resources caused extra spending that totaled $3,320.41 by the time the issue ended on 17 September 2026. Daily costs jumped from $1.66 to $10.37 because seven new items appeared on Amazon Elastic Compute Cloud. Please apply the correct team tag to these resources to prevent future billing surprises."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "An AWS cost incident happened on 29 July 2026 for the web team because usage went up on Amazon Simple Storage Service. This caused extra spending so far of $348.76 while the daily cost rose to $137.57. The incident ended on 31 July 2026, and we should review the usage for resource tw-media-exports."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Costs spiked on 25 July 2026 because cloud usage went up while resources were untagged, driving total extra spending to $3,335.61. This money matters because it significantly exceeds our usual daily cost of $2.31, reaching $66.65 when detected. Please apply the ml team tag to the affected Amazon Elastic Compute Cloud, Virtual Machines, and Storage services."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "A new resource named loadtest-ml-tmp or exp-12 appeared in AWS on 8 August 2026 and is still running, which added extra_cost_so_far of $544.02. If left unfixed, this will add extra_cost_per_month_if_not_fixed of $165.90 to our cloud bill. Please review and stop this untagged ml service immediately."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "AWS costs for Amazon Elastic Compute Cloud rose because usage went up starting on 2 August 2026, causing an extra cost so far of $2,121.70. This matters because daily spending increased from $86.84 to $142.47 by the time it was detected on 16 August 2026. The next step is to review the untagged, data, ml, platform, and web teams since the incident ended on 17 September 2026."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "A cost incident started on 20 August 2026 because usage went up for resources loadtest-ml-tmp, exp-12, and law-acme-prod. This unexpected usage increased the extra cost so far to $269.69, while the daily cost rose from $23.68 to $34.43 when detected. Although the status ended on 21 September 2026, the next step is to review the untagged, ml, and platform teams."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Usage went up for resource stwebassetsprod on 25 August 2026, causing extra costs of $626.46 for the web team. The daily cost jumped from $10.12 to $175.16 before the incident ended on 28 August 2026. Please review the Bandwidth and Storage services to confirm the issue is fully resolved."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "On 29 August 2026, increased usage on Amazon Elastic Compute Cloud caused the daily cost to jump from $3.02 to $10.63, adding $251.14 in extra expenses so far. If the data and ml teams do not fix these resources, it will cost an extra $262.32 per month. Please check the batch-1 and loadtest-ml-tmp resources to shut them down if they are no longer needed."
+  },
+  {
+   "seed": 0,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Usage went up on the AWS platform service Amazon CloudWatch for resource /acme/prod/app starting on 31 August 2026, which added an extra cost so far of $532.13. The daily cost jumped from the usual_daily_cost of $6.06 to $46.06 when detected, and the incident ended on 12 September 2026. Review the platform usage for Amazon CloudWatch to prevent future cost spikes."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The data team should move the tw-data-lake resource from the Standard tier to the Standard-IA tier. This change will save $410.13 a month and $4,921.56 a year because it is rarely read. The next step is to set up a lifecycle rule to make the move happen."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The platform team is currently paying $1,076.33 per month for pay-as-you-go servers on aks-prod-nodepool1, but switching to a 1-year reservation will save $301.84 monthly. This matters because it creates a yearly saving of $3,622.08 for the Microsoft cloud. The next step is to buy a 1-year reservation for 4 x Standard_D4s_v5."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model-retry",
+   "first_try_ungrounded": [
+    "$301"
+   ],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The data team's virtual machine is currently on pay-as-you-go pricing, but switching to a 1-year reservation will save $301.67 each month. This change will lower expenses and add up to $3,620.04 in yearly savings. Please approve the purchase of the 1-year reservation for the virtual machine."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The data team should buy a 1-year reservation for the Microsoft database server currently using pay-as-you-go. This change will save $3,620.04 a year. Review the suggestion and approve the purchase to secure the discount."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The data team's analytics-1 server in AWS is too big for the work it does, wasting $231.64 a month. Resize the server to the smaller size to secure $2,779.68 in yearly savings while keeping good performance. Approve the change in the cloud console."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The ml team has an idle AWS resource named loadtest-ml-tmp costing $231.64 a month. Stopping or deleting it will save $2,779.68 a year. Confirm with the owner, take a snapshot, and then delete it."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The platform team should move the Microsoft resource starchivelogsprod from Hot to Cool. This change saves $210.83 a month because storage prices drop. Approve the lifecycle rule change so these savings take effect."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The Microsoft virtual machine vm-reporting-old-01 is sitting idle and costing money every month. Stopping or deleting it will save $203.81 per month, which adds up to $2,445.72 per year. Please confirm with the owner, take a snapshot, and delete it."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The data team should buy a 1-year reservation for vm-etl-prod-01 on Microsoft instead of paying as you go. This will save $189.65 a month, adding up to $2,275.80 a year against the current monthly cost of $463.14. Approve this change so we can lock in these savings immediately."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The platform team should resize the Microsoft virtual machine vm-api-prod-01 to a smaller size because it currently wastes money on unused capacity. This change will save $184.09 per month, adding up to $2,209.08 in yearly savings. Please approve the resize request to capture these cost reductions immediately."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The platform team should downsize vm-api-prod-02 from Standard_D8s_v5 to Standard_D4s_v5 because performance will remain safe. This change will save $184.09 monthly and $2,209.08 yearly. Please approve the resize request for this Microsoft resource."
+  },
+  {
+   "seed": 0,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The platform team should move the AWS resource tw-logs-archive from the Standard tier to the Standard-IA tier. This change will save $136.36 a month and $1,636.32 a year. Please set up a lifecycle rule to apply this tiering change."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Microsoft raised prices on 24 November 2025 for resources managed by the platform and web teams, causing daily costs to jump from $30.53 to $46.45. This price increase added $126.46 in extra expenses before the incident ended on 5 December 2025. Review the updated unit pricing on these resources to ensure your budget accounts for the higher rates going forward."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Spend on Microsoft resources like Virtual Machines rose above its usual level starting on 1 December 2025 and ending on 9 December 2025. This caused an extra cost so far of $91.62 compared to the usual daily cost of $66.93. The platform and web teams should review the incident detected on 1 December 2025."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Usage went up for Amazon CloudWatch in AWS managed by the platform team, which increased costs because the daily cost went up from $5.71 to $33.72. This incident started on 22 December 2025 and ended on 5 January 2026, resulting in an extra cost so far of $259.40. Please review the usage on resource /acme/prod/app to prevent future cost spikes."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "A new platform cost started in Microsoft westeurope on 16 January 2026 and ended on 6 March 2026, adding $1,291.86 in extra charges. This happened because new spend for Virtual Machines, Bandwidth, and Storage did not exist before. Please review the platform team's new resources to make sure they are still needed."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Nine untagged Amazon Elastic Compute Cloud resources appeared on 18 January 2026, pushing our daily cost up to $10.37 and creating an extra cost so far of $3,547.33 until it ended on 24 April 2026. This matters because it raised our normal daily spend of $1.66 significantly. We need to review the untagged team resources to prevent future unexpected costs."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "On 6 March 2026, the commitment discount for vm-sql-prod-01 and vm-sql-prod-02 ended, causing the daily cost to jump from $28.55 to $48.38. This issue has added $4,145.73 in extra cost so far, and will add $603.76 per month if not fixed. The data team needs to renew the commitment discount on these Virtual Machines in Microsoft."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "AWS resource tw-media-exports had higher usage starting on 11 March 2026, which ended on 14 March 2026 and caused an extra cost so far of $475.52. This incident raised the daily cost from $7.97 to $130.48 for the web team using Amazon Simple Storage Service. The next step is to review the web team usage detected on 11 March 2026."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Usage went up for resource law-acme-prod on Microsoft Log Analytics starting on 7 April 2026, which added an extra cost so far of $885.06 because the daily cost jumped from $21.25 to $251.56. The incident for the platform team status ended on 12 April 2026. The next step is to review the usage for this item."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "A new resource under the ml team tag caused cloud costs to spike. This added $452.59 in extra expenses between 25 April 2026 and 7 July 2026. Please review the Amazon Elastic Compute Cloud, Virtual Machines, and Storage services to confirm the incident is fully resolved."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "Usage went up for resource aks-prod-nodepool1 starting on 13 May 2026, which ran until it ended on 27 May 2026. This incident caused an extra cost so far of $574.02 for the platform team. Please review the Virtual Machines services on Microsoft to prevent future unexpected charges."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "A new AWS web project started on 26 May 2026 caused extra costs of $1,634.56 because of new spend. This matters because leaving it unfixed will add $398.22 in extra cost per month. The next step is to fix the project tag customs on Amazon Elastic Compute Cloud and Amazon Simple Storage Service."
+  },
+  {
+   "seed": 1,
+   "kind": "cost incident",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "A new Microsoft virtual machine named vm-ml-loadtest-32 started running on 5 September 2026 and is currently costing the ml team $6.05 a day, adding $157.25 in extra cost so far. If we do not fix this, it will add $184.09 in extra cost per month. Please check with the ml team to see if we can shut down this resource."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The data team should move the tw-data-lake resource from the Standard tier to the Standard-IA tier using a lifecycle rule. This change will save $409.85 per month and $4,918.20 per year. Please approve this change so we can realize these savings."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The platform team can switch aks-prod-nodepool1 from pay-as-you-go to a 1-year reservation. This saves $3,622.08 yearly against the monthly_cost_now of $1,086.16. Approve the suggested action to buy a 1-year reservation for 4 x Standard_D4s_v5."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model-retry",
+   "first_try_ungrounded": [
+    "$301"
+   ],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The data team's virtual machine is currently on pay-as-you-go pricing, but switching to a 1-year reservation will save $301.67 each month. This change will lower expenses and add up to $3,620.04 in yearly savings. Please approve the purchase of the 1-year reservation for the virtual machine."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The data team should buy a 1-year reservation for the Microsoft database server currently using pay-as-you-go. This change will save $3,620.04 a year. Review the suggestion and approve the purchase to secure the discount."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model-retry",
+   "first_try_ungrounded": [
+    "$231",
+    "$2,779"
+   ],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The data team needs to resize the analytics-1 server on AWS because it is currently oversized. This change will save $463.28 per month and $2,779.68 per year while keeping performance safe. Please approve the resize request so we can start capturing these savings immediately."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The platform team can save $2,524 a year by moving the starchivelogsprod storage from Hot to Cool. This matters because the current monthly cost of $500 will drop by $210 each month. The next step is to set up a lifecycle rule to move the data."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The Microsoft reporting virtual machine for the data team is sitting idle and costing money every month. Stopping or deleting it will save $203.81 per month, adding up to $2,445.72 per year. Please confirm with the owner, take a snapshot, and delete the server."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The data team should buy a 1-year reservation for vm-etl-prod-01 on Microsoft instead of paying as you go. This will save $189.65 a month, adding up to $2,275.80 a year against the current monthly cost of $463.14. Approve this change so we can lock in these savings immediately."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The platform team needs to resize the server vm-api-prod-01 from Standard_D8s_v5 to Standard_D4s_v5 because it is currently oversized. This change will save $184.09 monthly and $2,209.08 yearly while keeping the CPU well under the limit. Please approve the sizing change for the platform team to capture these savings."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The platform team should resize the Microsoft virtual machine vm-api-prod-02 from Standard_D8s_v5 to Standard_D4s_v5 because it is currently oversized. This change will save $184.09 per month and $2,209.08 per year while keeping performance safe. Please approve the resize request to capture these savings."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The Microsoft virtual machine named vm-ml-loadtest-32 is sitting idle and costing $159.54 a month. Stopping or deleting it will save $159.54 monthly and $1,914.48 yearly. Please confirm with the owner, take a snapshot, and then delete it."
+  },
+  {
+   "seed": 1,
+   "kind": "savings recommendation",
+   "source": "model",
+   "first_try_ungrounded": [],
+   "final_grounded": true,
+   "mutant_caught": true,
+   "text": "The platform team should move the tw-logs-archive resource on AWS from Standard to Standard-IA. This change saves $136.30 a month and $1,635.60 a year. Please approve the lifecycle rule to start saving money."
+  }
+ ]
+}

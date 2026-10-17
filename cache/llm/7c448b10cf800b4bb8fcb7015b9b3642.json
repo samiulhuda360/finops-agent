@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Usage went up for 3 items on AWS and Microsoft starting on 20 August 2026, creating an extra cost so far of $269.69. The daily cost when detected rose to $34.43 compared to the usual daily cost of $23.68. Please review the teams and services involved to prevent future unexpected charges.",
+ "latency_s": 1.337,
+ "prompt_tokens": 294,
+ "completion_tokens": 78
+}

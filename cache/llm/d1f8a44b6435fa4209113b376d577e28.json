@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Usage went up for resource law-acme-prod on Microsoft Log Analytics starting on 5 July 2026, which ran until it ended on 15 July 2026. This incident increased your spending by an extra cost so far of $1,841.46 because the daily cost jumped from $15.26 to $174.32 when detected. Have the platform team review the usage changes for this resource to prevent future spikes.",
+ "latency_s": 1.462,
+ "prompt_tokens": 269,
+ "completion_tokens": 102
+}

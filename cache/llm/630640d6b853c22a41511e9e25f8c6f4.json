@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The data team's analytics-1 server in AWS is too big for the work it does, wasting $231.64 a month. Resize the server to the smaller size to secure $2,779.68 in yearly savings while keeping good performance. Approve the change in the cloud console.",
+ "latency_s": 0.986,
+ "prompt_tokens": 339,
+ "completion_tokens": 65
+}

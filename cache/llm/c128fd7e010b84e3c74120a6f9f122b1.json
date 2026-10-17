@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Microsoft costs rose above the usual level on 1 December 2025 because spending increased. This cost incident added $91.62 in extra cost so far, raising the daily cost to $78.40 compared to the usual daily cost of $66.93. The platform and web teams should review the incident that ended on 1 December 2025 to ensure spending returns to normal.",
+ "latency_s": 1.535,
+ "prompt_tokens": 410,
+ "completion_tokens": 88
+}

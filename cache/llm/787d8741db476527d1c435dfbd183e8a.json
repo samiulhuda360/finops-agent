@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Virtual Machines, Bandwidth, and Storage resources for the platform team on Microsoft spent more than usual because spend rose above its usual level, starting on 16 April 2026 and ending on 4 June 2026. This caused an extra cost so far of $1,056.79, moving the daily cost from $0.00 to $22.83 by the time it was detected on 30 April 2026. Review these items to prevent future unexpected Microsoft charges.",
+ "latency_s": 1.62,
+ "prompt_tokens": 293,
+ "completion_tokens": 112
+}

@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The platform team should resize the Microsoft virtual machine vm-api-prod-01 to a smaller size because it currently wastes money on unused capacity. This change will save $184.09 per month, adding up to $2,209.08 in yearly savings. Please approve the resize request to capture these cost reductions immediately.",
+ "latency_s": 1.037,
+ "prompt_tokens": 349,
+ "completion_tokens": 72
+}

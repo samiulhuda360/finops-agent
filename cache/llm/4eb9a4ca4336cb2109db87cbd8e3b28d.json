@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Usage spiked for the platform team's app on 22 December 2025, which drove up daily costs and added $259.40 in extra expenses before ending on 5 January 2026. This matters because expenses jumped from the usual $5.71 to $33.72 per day on AWS. The next step is to review Amazon CloudWatch usage to prevent future spikes.",
+ "latency_s": 1.542,
+ "prompt_tokens": 268,
+ "completion_tokens": 89
+}

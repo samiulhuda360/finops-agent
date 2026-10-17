@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The platform team needs to resize the server vm-api-prod-01 from Standard_D8s_v5 to Standard_D4s_v5 because it is currently oversized. This change will save $184.09 monthly and $2,209.08 yearly while keeping the CPU well under the limit. Please approve the sizing change for the platform team to capture these savings.",
+ "latency_s": 1.703,
+ "prompt_tokens": 349,
+ "completion_tokens": 86
+}

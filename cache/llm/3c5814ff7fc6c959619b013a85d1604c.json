@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "New Microsoft spending started in region westeurope on 11 April 2026 and ended on 4 June 2026, driven by services like Virtual Machines, Bandwidth, and Storage. This caused an extra cost so far of $1,463.85 compared to a usual daily cost of $0.00. The platform team should review the daily cost of $27.17 from 11 April 2026 to ensure this new spend does not return.",
+ "latency_s": 1.087,
+ "prompt_tokens": 274,
+ "completion_tokens": 108
+}

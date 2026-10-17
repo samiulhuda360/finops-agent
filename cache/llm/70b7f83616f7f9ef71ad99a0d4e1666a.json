@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The Microsoft virtual machine named vm-ml-loadtest-32 is sitting idle and costing $159.54 a month. Stopping or deleting it will save $159.54 monthly and $1,914.48 yearly. Please confirm with the owner, take a snapshot, and then delete it.",
+ "latency_s": 1.355,
+ "prompt_tokens": 287,
+ "completion_tokens": 70
+}

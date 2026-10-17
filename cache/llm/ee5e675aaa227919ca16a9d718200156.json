@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The platform team can switch aks-prod-nodepool1 from pay-as-you-go to a 1-year reservation. This saves $3,622.08 yearly against the monthly_cost_now of $1,086.16. Approve the suggested action to buy a 1-year reservation for 4 x Standard_D4s_v5.",
+ "latency_s": 1.514,
+ "prompt_tokens": 345,
+ "completion_tokens": 84
+}

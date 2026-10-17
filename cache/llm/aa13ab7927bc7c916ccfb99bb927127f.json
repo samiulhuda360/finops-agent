@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "On 16 July 2026, untagged AWS resources caused extra spending that totaled $3,320.41 by the time the issue ended on 17 September 2026. Daily costs jumped from $1.66 to $10.37 because seven new items appeared on Amazon Elastic Compute Cloud. Please apply the correct team tag to these resources to prevent future billing surprises.",
+ "latency_s": 1.456,
+ "prompt_tokens": 277,
+ "completion_tokens": 89
+}

@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Nine untagged Amazon Elastic Compute Cloud resources appeared on 18 January 2026, pushing our daily cost up to $10.37 and creating an extra cost so far of $3,547.33 until it ended on 24 April 2026. This matters because it raised our normal daily spend of $1.66 significantly. We need to review the untagged team resources to prevent future unexpected costs.",
+ "latency_s": 1.252,
+ "prompt_tokens": 277,
+ "completion_tokens": 97
+}

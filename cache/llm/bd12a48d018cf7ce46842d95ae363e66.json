@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The platform team should downsize vm-api-prod-02 from Standard_D8s_v5 to Standard_D4s_v5 because performance will remain safe. This change will save $184.09 monthly and $2,209.08 yearly. Please approve the resize request for this Microsoft resource.",
+ "latency_s": 1.321,
+ "prompt_tokens": 350,
+ "completion_tokens": 72
+}

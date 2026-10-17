@@ -1,0 +1,275 @@
+{
+ "fetched": "2026-10-17",
+ "currency": "USD",
+ "sources": {
+  "azure": "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview",
+  "aws": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/{AmazonEC2,AmazonS3,AWSDataTransfer,AmazonCloudWatch}/current/ and /savingsPlan/v1.0/aws/AWSComputeSavingsPlan/current/"
+ },
+ "notes": [
+  "Linux, pay-as-you-go list prices in USD. Tiered meters use the first paid tier.",
+  "Azure reservation_1y_hourly is the 1-year term price divided by 8760 hours.",
+  "AWS savings_plan_1y_hourly is the Linux rate under a 1-year, no-upfront Compute Savings Plan."
+ ],
+ "azure": {
+  "newzealandnorth": {
+   "vm": {
+    "Standard_B2s": {
+     "ondemand_hourly": 0.0554,
+     "vcpu": 2,
+     "memory_gb": 4,
+     "savings_plan_1y_hourly": 0.04036998
+    },
+    "Standard_B2ms": {
+     "ondemand_hourly": 0.111,
+     "vcpu": 2,
+     "memory_gb": 8,
+     "savings_plan_1y_hourly": 0.0808857
+    },
+    "Standard_D2s_v5": {
+     "ondemand_hourly": 0.126,
+     "vcpu": 2,
+     "memory_gb": 8,
+     "savings_plan_1y_hourly": 0.0937188,
+     "reservation_1y_total": 651.0,
+     "reservation_1y_hourly": 0.074315
+    },
+    "Standard_D4s_v5": {
+     "ondemand_hourly": 0.252,
+     "vcpu": 4,
+     "memory_gb": 16,
+     "savings_plan_1y_hourly": 0.1874376,
+     "reservation_1y_total": 1302.0,
+     "reservation_1y_hourly": 0.14863
+    },
+    "Standard_D8s_v5": {
+     "ondemand_hourly": 0.504,
+     "vcpu": 8,
+     "memory_gb": 32,
+     "savings_plan_1y_hourly": 0.3748752,
+     "reservation_1y_total": 2605.0,
+     "reservation_1y_hourly": 0.297374
+    },
+    "Standard_D16s_v5": {
+     "ondemand_hourly": 1.008,
+     "vcpu": 16,
+     "memory_gb": 64,
+     "savings_plan_1y_hourly": 0.7497504,
+     "reservation_1y_total": 5210.0,
+     "reservation_1y_hourly": 0.594749
+    },
+    "Standard_E2s_v5": {
+     "ondemand_hourly": 0.159,
+     "vcpu": 2,
+     "memory_gb": 16,
+     "savings_plan_1y_hourly": 0.1075158,
+     "reservation_1y_total": 819.0,
+     "reservation_1y_hourly": 0.093493
+    },
+    "Standard_E4s_v5": {
+     "ondemand_hourly": 0.317,
+     "vcpu": 4,
+     "memory_gb": 32,
+     "savings_plan_1y_hourly": 0.2143554,
+     "reservation_1y_total": 1639.0,
+     "reservation_1y_hourly": 0.1871
+    },
+    "Standard_E8s_v5": {
+     "ondemand_hourly": 0.634,
+     "vcpu": 8,
+     "memory_gb": 64,
+     "savings_plan_1y_hourly": 0.4287108,
+     "reservation_1y_total": 3278.0,
+     "reservation_1y_hourly": 0.374201
+    }
+   },
+   "disk_month": {
+    "P10": 19.71,
+    "P15": 38.012142,
+    "P20": 73.22,
+    "P30": 135.17
+   },
+   "blob": {
+    "hot_gb_month": 0.02,
+    "cool_gb_month": 0.01155,
+    "cool_retrieval_gb": 0.0105,
+    "hot_read_10k": 0.00462,
+    "cool_read_10k": 0.0105
+   },
+   "log_ingestion_gb": 3.507,
+   "egress_gb": 0.1155,
+   "inter_region_gb": 0.08
+  },
+  "westeurope": {
+   "vm": {
+    "Standard_B2s": {
+     "ondemand_hourly": 0.048,
+     "vcpu": 2,
+     "memory_gb": 4,
+     "savings_plan_1y_hourly": 0.03648
+    },
+    "Standard_B2ms": {
+     "ondemand_hourly": 0.096,
+     "vcpu": 2,
+     "memory_gb": 8,
+     "savings_plan_1y_hourly": 0.07296
+    },
+    "Standard_D2s_v5": {
+     "ondemand_hourly": 0.115,
+     "vcpu": 2,
+     "memory_gb": 8,
+     "savings_plan_1y_hourly": 0.0874,
+     "reservation_1y_total": 622.0,
+     "reservation_1y_hourly": 0.071005
+    },
+    "Standard_D4s_v5": {
+     "ondemand_hourly": 0.23,
+     "vcpu": 4,
+     "memory_gb": 16,
+     "savings_plan_1y_hourly": 0.1748,
+     "reservation_1y_total": 1243.0,
+     "reservation_1y_hourly": 0.141895
+    },
+    "Standard_D8s_v5": {
+     "ondemand_hourly": 0.46,
+     "vcpu": 8,
+     "memory_gb": 32,
+     "savings_plan_1y_hourly": 0.3496,
+     "reservation_1y_total": 2486.0,
+     "reservation_1y_hourly": 0.28379
+    },
+    "Standard_D16s_v5": {
+     "ondemand_hourly": 0.92,
+     "vcpu": 16,
+     "memory_gb": 64,
+     "savings_plan_1y_hourly": 0.6992,
+     "reservation_1y_total": 4973.0,
+     "reservation_1y_hourly": 0.567694
+    },
+    "Standard_E2s_v5": {
+     "ondemand_hourly": 0.152,
+     "vcpu": 2,
+     "memory_gb": 16,
+     "savings_plan_1y_hourly": 0.1027824,
+     "reservation_1y_total": 822.0,
+     "reservation_1y_hourly": 0.093836
+    },
+    "Standard_E4s_v5": {
+     "ondemand_hourly": 0.304,
+     "vcpu": 4,
+     "memory_gb": 32,
+     "savings_plan_1y_hourly": 0.2055648,
+     "reservation_1y_total": 1643.0,
+     "reservation_1y_hourly": 0.187557
+    },
+    "Standard_E8s_v5": {
+     "ondemand_hourly": 0.608,
+     "vcpu": 8,
+     "memory_gb": 64,
+     "savings_plan_1y_hourly": 0.4111296,
+     "reservation_1y_total": 3286.0,
+     "reservation_1y_hourly": 0.375114
+    }
+   },
+   "disk_month": {
+    "P10": 21.68,
+    "P15": 41.811428,
+    "P20": 80.54,
+    "P30": 148.68
+   },
+   "blob": {
+    "hot_gb_month": 0.0196,
+    "cool_gb_month": 0.01,
+    "cool_retrieval_gb": 0.01,
+    "hot_read_10k": 0.0043,
+    "cool_read_10k": 0.01
+   },
+   "log_ingestion_gb": 2.99,
+   "egress_gb": 0.08,
+   "inter_region_gb": 0.02
+  }
+ },
+ "aws": {
+  "ap-southeast-6": {
+   "ec2": {
+    "t3.medium": {
+     "ondemand_hourly": 0.0554,
+     "vcpu": 2,
+     "memory_gb": 4.0,
+     "savings_plan_1y_hourly": 0.0433
+    },
+    "t3.large": {
+     "ondemand_hourly": 0.1109,
+     "vcpu": 2,
+     "memory_gb": 8.0,
+     "savings_plan_1y_hourly": 0.0866
+    },
+    "m6i.large": {
+     "ondemand_hourly": 0.126,
+     "vcpu": 2,
+     "memory_gb": 8.0,
+     "savings_plan_1y_hourly": 0.09577
+    },
+    "m6i.xlarge": {
+     "ondemand_hourly": 0.252,
+     "vcpu": 4,
+     "memory_gb": 16.0,
+     "savings_plan_1y_hourly": 0.19155
+    },
+    "m6i.2xlarge": {
+     "ondemand_hourly": 0.504,
+     "vcpu": 8,
+     "memory_gb": 32.0,
+     "savings_plan_1y_hourly": 0.3831
+    },
+    "m6i.4xlarge": {
+     "ondemand_hourly": 1.008,
+     "vcpu": 16,
+     "memory_gb": 64.0,
+     "savings_plan_1y_hourly": 0.7662
+    },
+    "r6i.large": {
+     "ondemand_hourly": 0.15855,
+     "vcpu": 2,
+     "memory_gb": 16.0,
+     "savings_plan_1y_hourly": 0.11466
+    },
+    "r6i.xlarge": {
+     "ondemand_hourly": 0.3171,
+     "vcpu": 4,
+     "memory_gb": 32.0,
+     "savings_plan_1y_hourly": 0.22932
+    },
+    "r6i.2xlarge": {
+     "ondemand_hourly": 0.6342,
+     "vcpu": 8,
+     "memory_gb": 64.0,
+     "savings_plan_1y_hourly": 0.45864
+    },
+    "c6i.large": {
+     "ondemand_hourly": 0.11655,
+     "vcpu": 2,
+     "memory_gb": 4.0,
+     "savings_plan_1y_hourly": 0.08544
+    },
+    "c6i.xlarge": {
+     "ondemand_hourly": 0.2331,
+     "vcpu": 4,
+     "memory_gb": 8.0,
+     "savings_plan_1y_hourly": 0.17089
+    }
+   },
+   "ebs_gp3_gb_month": 0.1008,
+   "s3": {
+    "standard_gb_month": 0.02625,
+    "standard_ia_gb_month": 0.01449,
+    "ia_retrieval_gb": 0.01,
+    "get_per_1k": 0.00046199999999999995
+   },
+   "egress_gb": 0.114,
+   "cloudwatch": {
+    "log_ingestion_gb": 0.5,
+    "log_storage_gb_month": 0.03
+   }
+  }
+ }
+}

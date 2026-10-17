@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "An AWS cost incident happened on 29 July 2026 for the web team because usage went up on Amazon Simple Storage Service. This caused extra spending so far of $348.76 while the daily cost rose to $137.57. The incident ended on 31 July 2026, and we should review the usage for resource tw-media-exports.",
+ "latency_s": 1.103,
+ "prompt_tokens": 269,
+ "completion_tokens": 85
+}

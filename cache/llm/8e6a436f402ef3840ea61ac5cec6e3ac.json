@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The data team's virtual machine is currently on pay-as-you-go pricing, but switching to a 1-year reservation will save $301.67 each month. This change will lower expenses and add up to $3,620.04 in yearly savings. Please approve the purchase of the 1-year reservation for the virtual machine.",
+ "latency_s": 1.274,
+ "prompt_tokens": 434,
+ "completion_tokens": 78
+}

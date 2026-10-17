@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "A new AWS web project started on 26 May 2026 caused extra costs of $1,634.56 because of new spend. This matters because leaving it unfixed will add $398.22 in extra cost per month. The next step is to fix the project tag customs on Amazon Elastic Compute Cloud and Amazon Simple Storage Service.",
+ "latency_s": 1.521,
+ "prompt_tokens": 290,
+ "completion_tokens": 77
+}

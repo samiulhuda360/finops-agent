@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "Usage went up for resource law-acme-prod on Microsoft Log Analytics starting on 7 April 2026, which added an extra cost so far of $885.06 because the daily cost jumped from $21.25 to $251.56. The incident for the platform team status ended on 12 April 2026. The next step is to review the usage for this item.",
+ "latency_s": 1.377,
+ "prompt_tokens": 267,
+ "completion_tokens": 93
+}

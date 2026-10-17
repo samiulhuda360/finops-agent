@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The data team should buy a 1-year reservation for vm-etl-prod-01 on Microsoft instead of paying as you go. This will save $189.65 a month, adding up to $2,275.80 a year against the current monthly cost of $463.14. Approve this change so we can lock in these savings immediately.",
+ "latency_s": 1.363,
+ "prompt_tokens": 338,
+ "completion_tokens": 82
+}

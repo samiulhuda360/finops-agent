@@ -1,0 +1,7 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "text": "The Microsoft virtual machine vm-reporting-old-01 is sitting idle and costing money every month. Stopping or deleting it will save $203.81 per month, which adds up to $2,445.72 per year. Please confirm with the owner, take a snapshot, and delete it.",
+ "latency_s": 1.359,
+ "prompt_tokens": 290,
+ "completion_tokens": 67
+}
