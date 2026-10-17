@@ -1,7 +1,16 @@
 # finops-agent
 
-Cloud cost anomaly detection, root-cause drill-down and savings advice for Azure and AWS bills, priced from the
-public price lists and explained in plain words.
+**A watchdog for your cloud bill.** It reads your Microsoft Azure and Amazon Web Services bills every day, tells you
+when spending suddenly jumps and why, and lists the cheapest ways to bring it down.
+
+> **In plain words:** it works like a careful accountant who checks the cloud bill every morning instead of once a
+> month. When a cost suddenly jumps, say a test server someone forgot to switch off, it tells you that same day,
+> in one sentence, with who owns it and what it will cost if nobody acts.
+>
+> **Who it's for:** finance and IT teams at companies that pay for cloud services and are tired of surprise invoices.
+>
+> **What you get:** a daily check, a weekly summary in Slack, Teams or email, and a priced list of savings you can
+> act on.
 
 ## What it does
 
